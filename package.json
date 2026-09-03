@@ -2,11 +2,12 @@
   "name": "website-personal",
   "version": "1.0.0",
   "description": "My personal website.",
-  "main": "index.html",
+  "private": true,
   "scripts": {
-    "build": "vite build",
+    "build": "next build",
     "check": "tsc --noEmit",
-    "dev": "vite"
+    "dev": "next dev",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -14,7 +15,15 @@
   },
   "author": "Isaac DeFrain",
   "license": "MIT",
+  "dependencies": {
+    "next": "^15.5.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
   "devDependencies": {
-    "vite": "^8.2.2"
+    "@types/node": "^22.17.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "typescript": "^5.9.2"
   }
 }
