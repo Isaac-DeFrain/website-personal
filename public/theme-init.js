@@ -5,7 +5,7 @@
     if (theme === "light" || theme === "dark") {
       document.documentElement.dataset.theme = theme;
     }
-  } catch (_error) {
+  } catch {
     /* ignore storage failures */
   }
 })();
