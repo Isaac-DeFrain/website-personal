@@ -112,13 +112,19 @@ body {
 
 .nav-buttons {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-buttons-row {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.75rem;
-  max-width: 24rem;
 }
 
-.nav-buttons a {
+.nav-text-link {
   font: inherit;
   font-size: 0.875rem;
   font-weight: 600;
@@ -133,10 +139,40 @@ body {
     border-color 0.15s ease;
 }
 
-.nav-buttons a:hover,
-.nav-buttons a:focus-visible {
+.nav-text-link:hover,
+.nav-text-link:focus-visible {
   color: var(--color-button-text);
   background-color: color-mix(in srgb, var(--color-highlight) 80%, var(--color-button-text));
   border-color: color-mix(in srgb, var(--color-highlight) 80%, var(--color-button-text));
   outline: none;
+}
+
+.nav-social-row {
+  gap: 1rem;
+}
+
+.nav-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.nav-social-link:hover,
+.nav-social-link:focus-visible {
+  opacity: 0.75;
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.nav-social-icon {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: invert(1);
+}
+
+[data-theme="light"] .nav-social-icon {
+  filter: none;
 }
